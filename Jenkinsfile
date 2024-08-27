@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/BartTho/CI-CD/nodeapp.git'
+        git 'https://github.com/BartTho/CI-CD_App.git'
       }
     }
 
@@ -25,7 +25,7 @@ pipeline {
 
     stage('Pushing Image') {
       environment {
-               registryCredential = 'dockerhublogin'
+               registryCredential = 'bart.thonissen@thomasmore.be'
            }
       steps{
         script {
